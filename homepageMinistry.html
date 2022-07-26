@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Registration and Insurance Database</title>
+    <link rel="stylesheet" type="text/css" href="queryLEO.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1>Ministry of Transportation - Registration and Insurance Database</h1>
+    </div>
+
+    <div class="side">
+        <div class="box">
+            <a href="logout">Logout</a><br>
+            <a href="announcements">Announcements</a><br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Tools</strong></div>
+            <a href="insertVehicle.html">Register New Vehicle</a><br>
+            <a href="insertDriver.html">Register New Driver</a></br>
+            <a href="insertCompany.html">Register New Company</a></br>
+            </br>
+            <a href="insertDriver.html">Assign Company to Driver</a></br>
+            <a href="insertDriver.html">Assign Household to Driver</a></br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Others</strong></div>
+            <a href="queryLEO.html">LEO Login</a><br>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="box form">
+            <form action="addIncident.php" method="post">
+                <h2>Log an Accident</h2>
+                <hr>
+                <p>
+                    Provide details about an accident.
+                </p>
+                <strong>Event Number:</strong> <input name="eventNo" type="text" placeholder="012">
+                <br><br>
+                <strong>Time of Accident:</strong> <input name="time" type="text" placeholder="1970-01-01 00:00:00">                
+                <br><br>
+                <strong>Location of Accident:</strong> <input name="location" type="text" placeholder="EB Esplanade West @ Rogers Ave.">                
+                <br><br>
+                <strong>Number of Cars Involved:</strong> <input name="noCars" type="text" placeholder="2">                
+                <br><br>
+                <input type="submit" name="submit" value="Record">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="addInvolvedIn.php" method="post">
+                <h2>Add Vehicles to Accident</h2>
+                <hr>
+                <p>
+                    Link a Vehicle to an Accident.
+                </p>
+                <strong>Event Number:</strong> <input name="eventNo" type="text" placeholder="012">
+                <br><br>
+                <strong>Vehicle License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">                
+                <br><br>
+                <input type="submit" value="Record">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

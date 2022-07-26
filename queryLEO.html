@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Registration and Insurance Database</title>
+    <link rel="stylesheet" type="text/css" href="queryLEO.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1>Ministry of Transportation - Registration and Insurance Database</h1>
+    </div>
+
+    <div class="side">
+        <div class="box">
+            <a href="logout">Logout</a><br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Resources</strong></div>
+            <a href="ticketing">Issue Ticket</a><br>
+            <a href="important-info">Important Info</a><br>
+            <a href="alerts">Alerts</a></br>
+            <a href="tools">Quick Tools</a>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Others</strong></div>
+            <a href="homepageMinistry.html">Ministry Login</a><br>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="box form">
+            <form action="queryLEO.php" method="post">
+                <h2>Search a Vehicle or a License</h2>
+                <hr>
+                <p>
+                    Provide License Plate Serial OR Driver's License Number for database to query.
+                </p>
+                <strong>License Plate Serial:</strong> <input name="licensePlate" type="text" placeholder="AB123C">
+                <br><br>
+                <strong>Driver's License Number:</strong> <input name="licenseNo" type="text" placeholder="9012345">                
+                <br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

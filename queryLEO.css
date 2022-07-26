@@ -1,0 +1,38 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    padding-left: 3%;
+    text-align: left;
+}
+
+.box {
+    padding: 10px; 
+    margin-bottom: 10px;
+    background-color: #ffffff;
+}
+
+.head {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #23568d;
+}
+
+.side {
+    border-left: 2px solid #23568d;
+    float: left;
+    width: 10%;
+}
+
+.mid {
+    width: 89%;
+    float: left;
+}
+
+.form {
+    padding: 10px;
+    background: #e8e8e8;
+}
