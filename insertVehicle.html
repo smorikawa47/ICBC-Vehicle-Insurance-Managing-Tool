@@ -35,37 +35,37 @@
 
     <div class="mid">
         <div class="box form">
-            <form action="addIncident.php" method="post">
-                <h2>Log an Accident</h2>
+            <form action="addVehicle.php" method="post">
+                <h2>Register a New Vehicle</h2>
                 <hr>
                 <p>
-                    Provide details about an accident.
+                    Include details about a vehicle to be registered.<br> 
+                    Input Owner's Driver's License Number for private owners <strong>OR</strong> Company ID for commercial owners.
                 </p>
-                <strong>Event Number:</strong> <input name="eventNo" type="text" placeholder="012">
+                <strong>Owner's Driver's License Number:</strong> <input name="licenseNo" type="text" placeholder="9012345">
+                <br>
+                <strong>Company ID:</strong> <input name="companyID" type="text" placeholder="101234">
                 <br><br>
-                <strong>Time of Accident:</strong> <input name="time" type="text" placeholder="1970-01-01 00:00:00">                
+                <strong>License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">
                 <br><br>
-                <strong>Location of Accident:</strong> <input name="location" type="text" placeholder="EB Esplanade West @ Rogers Ave.">                
+                <strong>Make:</strong> <input name="make" type="text" placeholder="BMW">                
                 <br><br>
-                <strong>Number of Cars Involved:</strong> <input name="noCars" type="text">                
+                <strong>Model:</strong> <input name="model" type="text" placeholder="335i xDrive">                
                 <br><br>
-                <input type="submit" name="submit" value="Record">
-            </form>
-        </div>
-        <div class="box form">
-            <form action="addInvolvedIn.php" method="post">
-                <h2>Add Vehicles to Accident</h2>
+                <strong>Year:</strong> <input name="modelYear" type="text" placeholder="2015">                
+                <br><br>
                 <hr>
                 <p>
-                    Link a Vehicle to an Accident.
+                    Include insurance details about the vehicle to be registered.<br> 
+                    An insurance policy is required for all vehicles.
                 </p>
-                <strong>Event Number:</strong> <input name="eventNo" type="text" placeholder="012">
+                <strong>Policy Number:</strong> <input name="policyNo" type="text" placeholder="1123">                
                 <br><br>
-                <strong>Vehicle License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">                
+                <strong>Cost per Month ($):</strong> <input name="cost" type="text" placeholder="100">                
                 <br><br>
-                <strong>Fault Percentage:</strong> <input name="atFault" type="text">                
+                <strong>Coverage:</strong> <input name="coverage" type="text" placeholder="Basic Coverage">                
                 <br><br>
-                <input type="submit" name="submit" value="Record">
+                <input type="submit" name="submit" value="Register">
             </form>
         </div>
     </div>

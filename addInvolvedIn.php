@@ -4,15 +4,14 @@
 
     if(isset($_POST['submit'])){    
         $eventNo = $_POST['eventNo'];
-        $time = $_POST['time'];
-        $location = $_POST['location'];
-        $noCars = $_POST['noCars'];
+        $licensePlate = $_POST['licensePlate'];
+        $atFault = $_POST['atFault'];
 
         $sql = 
-        "INSERT INTO Incident VALUES ('$eventNo', '$noCars', '$time','$location')";
+        "INSERT INTO involvedIn VALUES ('$eventNo', '$licensePlate', '$atFault')";
 
         if(mysqli_query($conn, $sql)){
-            echo "Incident added successfully!" . "<br>" . "Event No: $eventNo, No. Cars: $noCars, Timestamp: $time, Location: $location"; 
+            echo "Incident linked successfully!" . "<br>" . "License Plate $licensePlate was involved in Event $eventNo and is $atFault% at fault."; 
         } 
         else{
             echo "Error: " . $sql . ":-" . mysqli_error($conn);
