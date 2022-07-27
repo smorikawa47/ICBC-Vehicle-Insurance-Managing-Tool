@@ -35,29 +35,17 @@
 
     <div class="mid">
         <div class="box form">
-            <form action="addDriver.php" method="post">
-                <h2>Register a New Driver</h2>
+            <form action="updateInsurance.php" method="post">
+                <h2>Update Insurance Coverage</h2>
                 <hr>
                 <p>
-                    Include details about a driver to be registered.<br> 
+                    Update insurance coverage for a vehicle.<br> 
                 </p>
-                <strong>License Number:</strong> <input name="licenseNo" type="text" placeholder="9012345">
+                <strong>Policy Number:</strong> <input name="policyNo" type="text" placeholder="1012">
                 <br><br>
-                <strong>Name:</strong> <input name="ownerName" type="text">
+                <strong>New Cost:</strong> <input name="newCost" type="text">
                 <br><br>
-                <strong>Age:</strong> <input name="age" type="text">
-                <br><br>
-                <strong>Address:</strong><br><textarea name="householdAddress" type="text"></textarea>
-                <br><br>
-                <strong>Number of Cars in Household:</strong> <input name="noCarsHH" type="text">
-                <br><br>
-                <strong>Number of Drivers in Household:</strong> <input name="noDriversHH" type="text">
-                <br><br>
-                <strong>Driver's License Class:</strong> <input name="licenseClass" type="text">                
-                <br><br>
-                <strong>Restrictions:</strong><br><textarea name="restrictions" type="text"></textarea>                
-                <br><br>
-                <strong>Driver's Number of Cars:</strong><br> <input name="noCars" type="text">                
+                <strong>New Coverage:</strong><br><textarea name="newCoverage" type="text"></textarea>
                 <br><br>
                 <input type="submit" name="submit" value="Register">
             </form>
