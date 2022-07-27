@@ -1,4 +1,4 @@
-INSERT INTO Company VALUES(100001, 'Bob\'s Mowing', 5, 5, '18960 72 Ave. Surrey, BC'');
+INSERT INTO Company VALUES(100001, 'Bob\'s Mowing', 5, 5, '18960 72 Ave. Surrey, BC');
 INSERT INTO Company VALUES(100002, 'IKEA', 10, 10, '1000 Lougheed Hwy. Coquitlam, BC');
 INSERT INTO Company VALUES(100003, 'Super Appliances', 5, 10, '13651 Bridgeport Rd. Richmond, BC');
 INSERT INTO Company VALUES(100004, 'Zoom Parking Management', 100, 500, '601 W Cordova St. Vancouver, BC');

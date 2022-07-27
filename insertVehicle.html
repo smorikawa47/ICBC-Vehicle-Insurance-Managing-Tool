@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Registration and Insurance Database</title>
+    <link rel="stylesheet" type="text/css" href="queryLEO.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1>Ministry of Transportation - Registration and Insurance Database</h1>
+    </div>
+
+    <div class="side">
+        <div class="box">
+            <a href="logout">Logout</a><br>
+            <a href="announcements">Announcements</a><br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Tools</strong></div>
+            <a href="homepageMinistry.html">Log an Accident</a><br>
+            <a href="insertVehicle.html">Register New Vehicle</a><br>
+            <a href="insertDriver.html">Register New Driver</a></br>
+            <a href="insertCompany.html">Register New Company</a></br>
+            </br>
+            <a href="updateAddress.html">Update Address</a></br>
+            <a href="updateInsurance.html">Change Coverage</a></br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Others</strong></div>
+            <a href="queryLEO.html">LEO Login</a><br>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="box form">
+            <form action="addVehicle.php" method="post">
+                <h2>Register a New Vehicle</h2>
+                <hr>
+                <p>
+                    Include details about a vehicle to be registered.<br> 
+                    Input Owner's Driver's License Number for private owners <strong>OR</strong> Company ID for commercial owners.
+                </p>
+                <strong>Owner's Driver's License Number:</strong> <input name="licenseNo" type="text" placeholder="9012345">
+                <br>
+                <strong>Company ID:</strong> <input name="companyID" type="text" placeholder="101234">
+                <br><br>
+                <strong>License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">
+                <br><br>
+                <strong>Make:</strong> <input name="make" type="text" placeholder="BMW">                
+                <br><br>
+                <strong>Model:</strong> <input name="model" type="text" placeholder="335i xDrive">                
+                <br><br>
+                <strong>Year:</strong> <input name="modelYear" type="text" placeholder="2015">                
+                <br><br>
+                <hr>
+                <p>
+                    Include insurance details about the vehicle to be registered.<br> 
+                    An insurance policy is required for all vehicles.
+                </p>
+                <strong>Policy Number:</strong> <input name="policyNo" type="text" placeholder="1123">                
+                <br><br>
+                <strong>Cost per Month ($):</strong> <input name="cost" type="text" placeholder="100">                
+                <br><br>
+                <strong>Coverage:</strong> <input name="coverage" type="text" placeholder="Basic Coverage">                
+                <br><br>
+                <input type="submit" name="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
