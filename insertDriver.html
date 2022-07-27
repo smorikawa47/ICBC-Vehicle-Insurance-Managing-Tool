@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Registration and Insurance Database</title>
+    <link rel="stylesheet" type="text/css" href="queryLEO.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1>Ministry of Transportation - Registration and Insurance Database</h1>
+    </div>
+
+    <div class="side">
+        <div class="box">
+            <a href="logout">Logout</a><br>
+            <a href="announcements">Announcements</a><br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Tools</strong></div>
+            <a href="homepageMinistry.html">Log an Accident</a><br>
+            <a href="insertVehicle.html">Register New Vehicle</a><br>
+            <a href="insertDriver.html">Register New Driver</a></br>
+            <a href="insertCompany.html">Register New Company</a></br>
+            </br>
+            <a href="updateAddress.html">Update Address</a></br>
+        </div>
+        <div class="box">
+            <div style="text-align: center"><strong>Others</strong></div>
+            <a href="queryLEO.html">LEO Login</a><br>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="box form">
+            <form action="addDriver.php" method="post">
+                <h2>Register a New Driver</h2>
+                <hr>
+                <p>
+                    Include details about a driver to be registered.<br> 
+                </p>
+                <strong>License Number:</strong> <input name="licenseNo" type="text" placeholder="9012345">
+                <br><br>
+                <strong>Name:</strong> <input name="ownerName" type="text">
+                <br><br>
+                <strong>Age:</strong> <input name="age" type="text">
+                <br><br>
+                <strong>Address:</strong><br><textarea name="householdAddress" type="text"></textarea>
+                <br><br>
+                <strong>Number of Cars in Household:</strong> <input name="noCarsHH" type="text">
+                <br><br>
+                <strong>Number of Drivers in Household:</strong> <input name="noDriversHH" type="text">
+                <br><br>
+                <strong>Driver's License Class:</strong> <input name="licenseClass" type="text">                
+                <br><br>
+                <strong>Restrictions:</strong><br><textarea name="restrictions" type="text"></textarea>                
+                <br><br>
+                <strong>Driver's Number of Cars:</strong><br> <input name="noCars" type="text">                
+                <br><br>
+                <input type="submit" name="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
