@@ -46,11 +46,7 @@
             FROM policyUsedInIncident 
                 WHERE policyUsedInIncident.eventNo = allIncidentAndPolicy.eventNo 
                     AND policyUsedInIncident.policyNo = allIncidentAndPolicy.policyNo));";
-        // "SELECT DISTINCT allIncidentAndPolicy.policyNo FROM allIncidentAndPolicy WHERE NOT EXISTS 
-        //     (SELECT policyUsedInIncident.policyNo  
-        //         FROM policyUsedInIncident 
-        //             WHERE policyUsedInIncident.eventNo = allIncidentAndPolicy.eventNo 
-        //                 AND policyUsedInIncident.policyNo = allIncidentAndPolicy.policyNo);";
+
         myTable($conn,$sql);
 
         // if(mysqli_query($conn, $sql)){
