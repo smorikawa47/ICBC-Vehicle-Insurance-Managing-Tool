@@ -96,7 +96,53 @@ INSERT INTO Incurs VALUES (004, 004);
 INSERT INTO Incurs VALUES (004, 005);
 
 INSERT INTO PaysFor VALUES (001, 1101);
+INSERT INTO PaysFor VALUES (002, 1101);
+INSERT INTO PaysFor VALUES (003, 1101);
+INSERT INTO PaysFor VALUES (004, 1101);
+INSERT INTO PaysFor VALUES (005, 1101);
+
 INSERT INTO PaysFor VALUES (002, 1201);
 INSERT INTO PaysFor VALUES (003, 1301);
 INSERT INTO PaysFor VALUES (004, 1401);
 INSERT INTO PaysFor VALUES (005, 1501);
+
+INSERT INTO policyUsedInIncident VALUES(1, 1101);
+INSERT INTO policyUsedInIncident VALUES(2, 1101);
+INSERT INTO policyUsedInIncident VALUES(3, 1101);
+INSERT INTO policyUsedInIncident VALUES(4, 1101);
+INSERT INTO policyUsedInIncident VALUES(5, 1101);
+
+INSERT INTO policyUsedInIncident VALUES(2, 1201);
+INSERT INTO policyUsedInIncident VALUES(3, 1301);
+INSERT INTO policyUsedInIncident VALUES(4, 1401);
+INSERT INTO policyUsedInIncident VALUES(5, 1501);
+
+INSERT INTO allIncidentAndPolicy VALUES(1, 1101);
+INSERT INTO allIncidentAndPolicy VALUES(1, 1201);
+INSERT INTO allIncidentAndPolicy VALUES(1, 1301);
+INSERT INTO allIncidentAndPolicy VALUES(1, 1401);
+INSERT INTO allIncidentAndPolicy VALUES(1, 1501);
+
+INSERT INTO allIncidentAndPolicy VALUES(2, 1101);
+INSERT INTO allIncidentAndPolicy VALUES(2, 1201);
+INSERT INTO allIncidentAndPolicy VALUES(2, 1301);
+INSERT INTO allIncidentAndPolicy VALUES(2, 1401);
+INSERT INTO allIncidentAndPolicy VALUES(2, 1501);
+
+INSERT INTO allIncidentAndPolicy VALUES(3, 1101);
+INSERT INTO allIncidentAndPolicy VALUES(3, 1201);
+INSERT INTO allIncidentAndPolicy VALUES(3, 1301);
+INSERT INTO allIncidentAndPolicy VALUES(3, 1401);
+INSERT INTO allIncidentAndPolicy VALUES(3, 1501);
+
+INSERT INTO allIncidentAndPolicy VALUES(4, 1101);
+INSERT INTO allIncidentAndPolicy VALUES(4, 1201);
+INSERT INTO allIncidentAndPolicy VALUES(4, 1301);
+INSERT INTO allIncidentAndPolicy VALUES(4, 1401);
+INSERT INTO allIncidentAndPolicy VALUES(4, 1501);
+
+INSERT INTO allIncidentAndPolicy VALUES(5, 1101);
+INSERT INTO allIncidentAndPolicy VALUES(5, 1201);
+INSERT INTO allIncidentAndPolicy VALUES(5, 1301);
+INSERT INTO allIncidentAndPolicy VALUES(5, 1401);
+INSERT INTO allIncidentAndPolicy VALUES(5, 1501);

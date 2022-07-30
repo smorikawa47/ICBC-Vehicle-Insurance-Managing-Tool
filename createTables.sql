@@ -131,3 +131,19 @@ CREATE TABLE PaysFor(
     FOREIGN KEY (invoiceNo) REFERENCES Bill(invoiceNo),
     FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
 );
+
+CREATE TABLE policyUsedInIncident(
+    eventNo           INTEGER NOT NULL,
+    policyNo            INTEGER NOT NULL,
+    PRIMARY KEY (eventNo, policyNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
+);
+
+CREATE TABLE allIncidentAndPolicy(
+    eventNo           INTEGER NOT NULL,
+    policyNo            INTEGER NOT NULL,
+    PRIMARY KEY (eventNo, policyNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
+);
