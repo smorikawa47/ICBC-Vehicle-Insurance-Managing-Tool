@@ -26,9 +26,6 @@
             </br>
             <a href="updateAddress.html">Update Address</a></br>
             <a href="updateInsurance.html">Change Coverage</a></br>
-            </br>
-            <a href="insertDriver.html">Assign Company to Driver</a></br>
-            <a href="insertDriver.html">Assign Household to Driver</a></br>
         </div>
         <div class="box">
             <div style="text-align: center"><strong>Others</strong></div>
@@ -67,6 +64,19 @@
                 <strong>Vehicle License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">                
                 <br><br>
                 <input type="submit" value="Record">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="viewInvoices.php" method="post">
+                <h2>View Current Invoices</h2>
+                <hr>
+                <p>
+                    Available columns: [invoiceNo / amount / items]. Leave blank to see all information.
+                </p>
+                <strong>Column:</strong> 
+                <input name="column" type="text">
+                <br><br>
+                <input type="submit" name="submit" value="Show">
             </form>
         </div>
         <div class="box form">
