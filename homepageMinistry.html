@@ -47,7 +47,7 @@
                 <br><br>
                 <strong>Location of Accident:</strong> <input name="location" type="text" placeholder="EB Esplanade West @ Rogers Ave.">                
                 <br><br>
-                <strong>Number of Cars Involved:</strong> <input name="noCars" type="text">                
+                <strong>Number of Cars Involved:</strong> <input name="noCars" type="text" placeholder="2">                
                 <br><br>
                 <input type="submit" name="submit" value="Record">
             </form>
@@ -63,12 +63,73 @@
                 <br><br>
                 <strong>Vehicle License Plate:</strong> <input name="licensePlate" type="text" placeholder="AB123C">                
                 <br><br>
-                <strong>Fault Percentage:</strong> <input name="atFault" type="text">                
+                <input type="submit" value="Record">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="viewInvoices.php" method="post">
+                <h2>View Current Invoices</h2>
+                <hr>
+                <p>
+                    Available columns: [invoiceNo / amount / items]. Leave blank to see all information.
+                </p>
+                <strong>Column:</strong> 
+                <input name="column" type="text">
+                <br><br>
+                <input type="submit" name="submit" value="Show">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="deleteIncident.php" method="post">
+                <h2>Delete an Accident</h2>
+                <hr>
+                <p>
+                    Enter an event number to delete an accident.
+                </p>
+                <strong>Event Number:</strong> 
+                <input name="eventNo" type="text" placeholder="012">
                 <br><br>
                 <input type="submit" name="submit" value="Record">
             </form>
         </div>
+        <div class="box form">
+            <form action="deleteDriver.php" method="post">
+                <h2>Delete a Driver</h2>
+                <hr>
+                <p>
+                    Enter a license number to delete a driver.
+                </p>
+                <strong>License Number:</strong> 
+                <input name="licenseNo" type="text" placeholder="9012345">
+                <br><br>
+                <input type="submit" name="submit" value="Record">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="totalInvoiceCost.php" method="post">
+                <h2>Get the total invoice cost of an incident</h2>
+                <hr>
+                <p>
+                    Enter an incident number to get the total invoice cost of an incident.
+                </p>
+                <strong>Event Number:</strong> 
+                <input name="eventNo" type="text" placeholder="012">
+                <br><br>
+                <input type="submit" name="submit" value="Record">
+            </form>
+        </div>
+        <div class="box form">
+            <form action="policyInEveryIncident.php" method="post">
+                <h2>Get insurance policies that have been involved in every incident</h2>
+                <hr>
+                <!-- <p>
+                    Enter an incident number to get the total invoice cost of an incident.
+                </p> -->
+                <!-- <strong>Event Number:</strong> 
+                <input name="eventNo" type="text" placeholder="012"> -->
+                <!-- <br><br> -->
+                <input type="submit" name="submit" value="Show">
+            </form>
+        </div>
     </div>
 </body>
-
-</html>

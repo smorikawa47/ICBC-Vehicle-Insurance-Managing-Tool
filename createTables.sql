@@ -42,7 +42,7 @@ CREATE TABLE CarOwner(
     age                 INTEGER NOT NULL,
     noCars              INTEGER NOT NULL,
     PRIMARY KEY (licenseNo, ownerName),
-    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo)
+    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo) ON DELETE CASCADE
 );
 
 CREATE TABLE Household(
@@ -65,14 +65,14 @@ CREATE TABLE Driver_HiredBy(
     licenseNo           INTEGER UNIQUE NOT NULL,
     PRIMARY KEY (licenseNo, companyID),
     FOREIGN KEY (companyID) REFERENCES Company(companyID),
-    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo)
+    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo) ON DELETE CASCADE
 );
 
 CREATE TABLE Vehicle_OwnedByDriver(
     licenseNo           INTEGER UNIQUE NOT NULL,
     licensePlate        CHAR(6) UNIQUE NOT NULL,
     PRIMARY KEY (licenseNo, licensePlate),
-    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo),
+    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo) ON DELETE CASCADE,
     FOREIGN KEY (licensePlate) REFERENCES Vehicle(licensePlate)
 );
 
@@ -89,14 +89,14 @@ CREATE TABLE BelongTo(
     licenseNo           INTEGER,
     PRIMARY KEY (householdAddress, licenseNo),
     FOREIGN KEY (householdAddress) REFERENCES Household(householdAddress),
-    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo)
+    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo) ON DELETE CASCADE
 );
 
 CREATE TABLE HeldBy(
     licenseNo           INTEGER UNIQUE NOT NULL, 
     driverName          CHAR(20) NOT NULL,
     PRIMARY KEY (licenseNo),
-    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo)
+    FOREIGN KEY (licenseNo) REFERENCES License(licenseNo) ON DELETE CASCADE
 );
 
 CREATE TABLE CoveredBy(
@@ -112,7 +112,7 @@ CREATE TABLE InvolvedIn(
     licensePlate        CHAR(6) NOT NULL,
     atFault             INTEGER NOT NULL,
     PRIMARY KEY (eventNo, licensePlate),
-    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo) ON DELETE CASCADE,
     FOREIGN KEY (licensePlate) REFERENCES Vehicle(licensePlate)
 );
 
@@ -120,7 +120,7 @@ CREATE TABLE Incurs(
     eventNo             INTEGER NOT NULL,
     invoiceNo           INTEGER NOT NULL,
     PRIMARY KEY (eventNo, invoiceNo),
-    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo) ON DELETE CASCADE,
     FOREIGN KEY (invoiceNo) REFERENCES Bill(invoiceNo)
 );
 
@@ -132,4 +132,18 @@ CREATE TABLE PaysFor(
     FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
 );
 
+CREATE TABLE policyUsedInIncident(
+    eventNo           INTEGER NOT NULL,
+    policyNo            INTEGER NOT NULL,
+    PRIMARY KEY (eventNo, policyNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
+);
 
+CREATE TABLE allIncidentAndPolicy(
+    eventNo           INTEGER NOT NULL,
+    policyNo            INTEGER NOT NULL,
+    PRIMARY KEY (eventNo, policyNo),
+    FOREIGN KEY (eventNo) REFERENCES Incident(eventNo),
+    FOREIGN KEY (policyNo) REFERENCES Insurance(policyNo)
+);
