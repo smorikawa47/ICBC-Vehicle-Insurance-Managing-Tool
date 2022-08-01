@@ -6,7 +6,7 @@ INSERT INTO Company VALUES(100005, 'Autocraft Auto Parts', 2, 3, '5459 Kingsway 
 
 INSERT INTO Incident VALUES(001, 2, '2021-12-03 09:32:23', 'EB Brunette Ave. @ Hwy. 1 Offramp');
 INSERT INTO Incident VALUES(002, 5, '2022-04-20 21:32:17', 'SB Hwy. 99 @ George Massey Tunnel');
-INSERT INTO Incident VALUES(003, 1, '2021-06-09 06:09:00', 'NB 154 St. @ 86 Ave.');
+INSERT INTO Incident VALUES(003, 1, '2021-06-09 06:09:00', 'EB Brunette Ave. @ Hwy. 1 Offramp');
 INSERT INTO Incident VALUES(004, 2, '2022-05-23 15:43:37', 'WB Alderbridge Way @ No. 3 Rd.');
 INSERT INTO Incident VALUES(005, 2, '2022-07-01 23:57:55', 'NB Seymour St. @ W Georgia St.');
 
